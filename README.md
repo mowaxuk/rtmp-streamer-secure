@@ -15,8 +15,8 @@ A modular, Dockerized RTMP/HLS streaming stack with SSL encryption, login protec
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/mowaxuk/rtmp-streamer-secure.git
+cd rtmp-streamer-secure
 docker compose up -d
 ```
 
@@ -26,7 +26,7 @@ Then visit your stream portal at:
 ## 📁 File Structure
 
 ```
-your-repo-name/
+rtmp-streamer-secure/
 ├── docker-compose.yml
 ├── nginx/
 │   ├── nginx.conf
@@ -75,5 +75,5 @@ This stack is built for clarity and handoff:
 
 ## 🧾 Attribution
 
-Built by **[Your Name]**  
+Built by **Wayne**  
 Secure broadcast architect and modular deployment specialist.
