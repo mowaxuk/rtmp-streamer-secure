@@ -1,0 +1,5 @@
+# Sensitive and runtime files
+.htpasswd
+certs/
+hls/
+.env

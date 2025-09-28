@@ -1,0 +1,24 @@
+services:
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    ports:
+      - "80:80"
+    command: certonly --standalone --preferred-challenges http -d stream-mowaxuk.hopto.org --agree-tos --email mowaxuk@gmail.com --no-eff-email --non-interactive
+    volumes:
+      - ./certs:/etc/letsencrypt
+
+  nginx-rtmp:
+    image: tiangolo/nginx-rtmp
+    container_name: nginx-rtmp
+    ports:
+      - "1935:1935"    # RTMP input from OBS
+      - "8080:80"      # Web portal (HTTP)
+      - "443:443"      # HTTPS portal
+    volumes:
+      - ./hls:/tmp/hls                         # HLS output
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Custom NGINX config
+      - ./html:/usr/share/nginx/html:ro       # Stream page
+      - ./.htpasswd:/etc/nginx/.htpasswd:ro   # Login credentials
+      - ./certs:/etc/letsencrypt              # SSL certs
+    restart: unless-stopped
