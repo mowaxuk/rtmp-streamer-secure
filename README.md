@@ -15,18 +15,18 @@ A modular, Dockerized RTMP/HLS streaming stack with SSL encryption, login protec
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/mowaxuk/rtmp-streamer-secure.git
-cd rtmp-streamer-secure
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 docker compose up -d
 ```
 
 Then visit your stream portal at:  
-**https://stream-mowaxuk.hopto.org**
+**https://yourdomain.example.com**
 
 ## 📁 File Structure
 
 ```
-rtmp-streamer-secure/
+your-repo-name/
 ├── docker-compose.yml
 ├── nginx/
 │   ├── nginx.conf
@@ -44,8 +44,8 @@ Make sure ports 80/443 are free during initial challenge.
 
 ```bash
 docker compose run certbot certonly --standalone \
-  -d stream-mowaxuk.hopto.org \
-  --email your@email.com --agree-tos --no-eff-email
+  -d yourdomain.example.com \
+  --email admin@example.com --agree-tos --no-eff-email
 ```
 
 ## 🔒 Basic Auth
@@ -75,5 +75,5 @@ This stack is built for clarity and handoff:
 
 ## 🧾 Attribution
 
-Built by [**Wayne**](https://github.com/mowaxuk)  
-Gateshead’s own encrypted broadcaster and telemetry architect.
+Built by **[Your Name]**  
+Secure broadcast architect and modular deployment specialist.
